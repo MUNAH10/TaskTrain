@@ -1,43 +1,38 @@
-class UsersController < ApplicationController
-
-    before_action :session_expired?, only: [:check_login_status]
-
-    def register
-
-        user = User.create(user_params)
-        if user.valid?
-            save_user(user.id)
-            app_response(message: 'Registration was successful', status: :created, data: user)
-        else
-            app_response(message: 'Something went wrong during registration', status: :unprocessable_entity, data: user.errors)
-        end
-    end
-
-    def login
-        sql = "username = :username OR email = :email"
-        user = User.where(sql, { username: user_params[:username], email: user_params[:email] }).first
-        if user&.authenticate(user_params[:password])
-            save_user(user.id)
-            app_response(message: 'Login was successful', status: :ok, data: user)
-        else
-            app_response(message: 'Invalid username/email or password', status: :unauthorized)
-        end
-    end
-
-    def logout
-        remove_user
-        app_response(message: 'Logout successful')
-    end
-
-    def check_login_status
-        app_response(message: 'success', status: :ok)
-    end
-
-    private 
-
-    def user_params
-        params.permit(:username, :email, :password)
-    end
-
+class TodosController < ApplicationController
+    before_action :session_expired?
     
+    def create
+        todo = user.todos.create(todo_params)
+        if todo.valid?
+            app_response(status: :created, data: todo)
+        else
+            app_response(status: :unprocessable_entity, data: todo.errors, message: 'failed')
+        end
+    end
+    def update
+        todo = user.todos.find(params[:id]).update(todo_params)
+        if todo
+            app_response(data: { info: 'updated todo successfully' })
+        else
+            app_response(message: 'failed', data: { info: 'something went wrong. could not update todo' }, status: :unprocessable_entity)
+        end
+    end
+
+    def destroy
+        user.todos.find(params[:id]).destroy
+        app_response(message: 'success', data: { info: 'deleted todo successfully' }, status: 204)
+    end
+
+    def index
+        todos = user.todos.all
+        app_response(message: 'success', data: todos)
+    end
+
+    private
+
+    def todo_params
+        params.permit(:title, :description, :status, :priority)
+    end
+
+
 end
