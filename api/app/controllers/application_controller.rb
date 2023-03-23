@@ -1,6 +1,8 @@
 lass ApplicationController < ActionController::API
 
 include ActionController::Cookies
+rescue_from StandardError, with: :standard_error
+
 
 def app_response(message: 'success', status: 200, data: nil)
     render json: {
@@ -33,6 +35,10 @@ end
 # get logged in user
 def user
     User.find(session[:uid].to_i) 
+end
+
+def standard_error(exception)
+    app_response(message: 'failed', data: { info: exception.message }, status: :unprocessable_entity)
 end
 
 end
