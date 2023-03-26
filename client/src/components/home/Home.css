@@ -44,5 +44,16 @@
     #taskList {
       margin-top: 30px;
     }
+    /* Home.css */
+
+/* Position the signing container */
+.signing-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+  
   }
   

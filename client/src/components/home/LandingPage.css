@@ -1,0 +1,109 @@
+/* Landingpage.css */
+
+/* Set the background color of the entire page */
+body {
+    background-color: #99f8f3;
+  }
+  
+  /* Style the container */
+  .container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 100px;
+  }
+  
+  /* Style the heading */
+  #hone {
+    font-size: 48px;
+    font-weight: bold;
+    color: #0a0dac;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the first paragraph */
+  #prgh {
+    font-size: 24px;
+    color: #666666;
+    margin-bottom: 50px;
+  }
+  
+  /* Style the login arrow icon */
+  #login_arrow {
+    color: #333333;
+    text-decoration: none;
+    font-size: 28px;
+    margin-left: 10px;
+  }
+  
+  /* Style the login arrow icon on hover */
+  #login_arrow:hover {
+    color: #1c4b01;
+  }
+  
+
+/* Set the position of the container to relative */
+.container {
+    position: relative;
+  }
+  
+  /* Style the Signup component */
+  .Signing {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  /* Set the width and height of the Signup component */
+  .Signing .login-wrap {
+    width: 300px;
+    height: 400px;
+  }
+  
+  /* Style the Signup form */
+  .Signing .login-html {
+    background-color: #b9d372;
+    padding: 40px;
+  }
+  
+  /* Style the Signup form heading */
+  .Signing .tab {
+    font-size: 18px;
+  }
+  
+  /* Style the Signup form input fields */
+  .Signing .group {
+    margin-bottom: 20px;
+  }
+  
+  .Signing .label {
+    font-size: 16px;
+    color: #333333;
+  }
+  
+  .Signing .input {
+    border: none;
+    border-bottom: 1px solid #333333;
+    font-size: 16px;
+    color: #333333;
+    padding: 10px 0;
+    width: 100%;
+  }
+  
+  /* Style the Signup form submit button */
+  .Signing .button {
+    background-color: #333333;
+    border: none;
+    color: #0f0101;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    width: 100%;
+  }
+  
+  /* Style the Signup form submit button on hover */
+  .Signing .button:hover {
+    background-color: #666666;
+  }
+  
