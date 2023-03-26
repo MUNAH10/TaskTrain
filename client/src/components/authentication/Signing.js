@@ -1,11 +1,11 @@
 import React from "react";
 
 
-function Login(){
+function Signing(){
     return(
         <>
         </>
     )
 }
 
-export default Login;
+export default Signing;

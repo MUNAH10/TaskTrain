@@ -1,11 +1,11 @@
 import React from "react";
 
 
-function SignUp(){
+function LandingPage(){
     return(
         <>
         </>
     )
 }
 
-export default SignUp;
+export default LandingPage;
