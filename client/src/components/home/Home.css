@@ -1,0 +1,48 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  #selection {
+    background-color: #5a697a;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+  #armySelect {
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  #taskList {
+    margin-top: 50px;
+  }
+  
+  h4 {
+    color: #333;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .container {
+      padding: 0 20px;
+    }
+  
+    #selection {
+      padding: 10px;
+    }
+  
+    #armySelect {
+      font-size: 24px;
+    }
+  
+    #taskList {
+      margin-top: 30px;
+    }
+  }
+  
