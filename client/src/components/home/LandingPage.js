@@ -9,10 +9,10 @@ function Landingpage(){
     return(
         <>
             <div className="container">
-                <h1 contenteditable id="hone">Task-Train</h1>
+                <h1 contenteditable id="home">Task-Train</h1>
                 <p id="prgh">{paragraphContent}</p>
                 <p id="prgh">Login & Sign Up </p>
-                 <Link to="/auth" id="login_arrow"><HiOutlineArrowNarrowRight/></Link>
+                 <Link to="/authentication" id="login_arrow"><HiOutlineArrowNarrowRight/></Link>
             </div>
         </>
     )

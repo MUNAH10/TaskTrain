@@ -29,7 +29,7 @@ function Home(){
 
         <div className="container mt-3" id="taskList">
             <center>
-                <h4> Nani Tasks</h4>
+                <h4> Main Tasks</h4>
             </center>
             <div  className="row">
 

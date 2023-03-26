@@ -26,15 +26,15 @@ function App() {
           <Link to="/" id="logo_title">TASK-TRAIN</Link>  
         </h3>
 
-        <button id="auth_logo" >
-        <Link to="/auth"><AiOutlineLogin/></Link>
+        <button id="authentication_logo" >
+        <Link to="/authentication"><AiOutlineLogin/></Link>
         </button>
 
       </div>
       <Routes>
         <Route path="/" element={<LandingPage/>}/>
        <Route path="/home" element={<Home/>}/>
-       <Route path="/auth" element={
+       <Route path="/authentication" element={
        
         !user ? <Signing signup={signup} /> : <Navigate to="/home"></Navigate>
        }/>
